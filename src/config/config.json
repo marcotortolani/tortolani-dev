@@ -1,0 +1,80 @@
+{
+  "works": [
+    {
+      "title": "Team Gamers (Movistar Venezuela)",
+      "description": "Portal de contenido de entretenimiento. Temática gaming, gamers, streamers, eventos, editoriales y música trap/urbana.",
+      "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento técnico de utilizar SSR (Server Side Rendering) para obtener una mejor performance ya que muy pocos elementos se renderizan en el cliente y por posicionamiento SEO del sitio. Todo el contenido del portal se consume de un sitio de WordPress utilizando su RESTful API. Todas los sliders están realizados con SwiperJS y hay algunas animaciones donde se utilizó Framer Motion.",
+      "desktopImg": "/images/portfolio/team-gamers-movistar-ve-desktop.png",
+      "mobileImg": "/images/portfolio/team-gamers-movistar-ve-mobile.png",
+      "techStack": [
+        { "icon": "IconBrandNextjs", "name": "NextJS 14" },
+        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
+        { "icon": "IconBrandWordpress", "name": "WordPress API" },
+        { "icon": "IconBrandFramerMotion", "name": "Framer Motion" },
+        { "icon": "IconBrandPnpm", "name": "PNPM" },
+        { "icon": "", "name": "SwiperJS" },
+        { "icon": "", "name": "Post CSS" },
+        { "icon": "", "name": "Flowbite React" }
+      ],
+      "urlSite": "http://ve.movistar.new.teamgamers.club/",
+      "urlDemo": "https://team-gamers-demo.vercel.app/",
+      "urlRepo": ""
+    },
+    {
+      "title": "Epa Mujer (Digitel Venezuela)",
+      "description": "Portal de contenido para mujeres. Temática bienestar, moda, belleza, recetas, cosmic y más.",
+      "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento técnico de utilizar SSR (Server Side Rendering) para obtener una mejor performance ya que muy pocos elementos se renderizan en el cliente y por posicionamiento SEO del sitio. Todo el contenido del portal se consume de un sitio de WordPress utilizando su RESTful API. Todas los sliders están realizados con SwiperJS.",
+      "desktopImg": "/images/portfolio/epa-mujer-demo-desktop.png",
+      "mobileImg": "/images/portfolio/epa-mujer-demo-mobile.png",
+      "techStack": [
+        { "icon": "IconBrandNextjs", "name": "NextJS 14" },
+        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
+        { "icon": "IconBrandWordpress", "name": "WordPress API" },
+        { "icon": "IconBrandPnpm", "name": "PNPM" },
+        { "icon": "", "name": "SwiperJS" },
+        { "icon": "", "name": "Post CSS" }
+      ],
+      "urlSite": "https://epa-mujer-digitel-ven.vercel.app/",
+      "urlDemo": "",
+      "urlRepo": ""
+    },
+    {
+      "title": "Memoob Agency 2024",
+      "description": "Sitio institucional de Media Moob. Rediseño año 2024",
+      "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento de obtener una mejor performance y por posicionamiento SEO del sitio. Por el gran alcance de la empresa, para la internacionalización del idioma se utilizó i18n. Para los formularios se usó React Hook Form con Yup para la validación de los campos, en el caso del formulario de newsletter se usa el servicio de Mailchimp. Todas los sliders están realizados con SwiperJS.",
+      "desktopImg": "/images/portfolio/memoob-agency-2024-desktop.png",
+      "mobileImg": "/images/portfolio/memoob-agency-2024-mobile.png",
+      "techStack": [
+        { "icon": "IconBrandNextjs", "name": "NextJS 14" },
+        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
+        { "icon": "IconBrandPnpm", "name": "PNPM" },
+        { "icon": "", "name": "React Hook Form" },
+        { "icon": "", "name": "Yup" },
+        { "icon": "", "name": "i18n" },
+        { "icon": "", "name": "SwiperJS" },
+        { "icon": "", "name": "Post CSS" },
+        { "icon": "", "name": "Mailchimp Newsletter" }
+      ],
+      "urlSite": "",
+      "urlDemo": "https://memoob-agency-2024.vercel.app/",
+      "urlRepo": ""
+    },
+    {
+      "title": "Media Moob Store",
+      "description": "App interna para tener centralizado el acceso a los productos de Media Moob.",
+      "developmentDescription": "El sitio fue desarrollado utilizando ReactJS. Todas los sliders están realizados con SwiperJS.",
+      "desktopImg": "/images/portfolio/mediamoob-store-demo-desktop.png",
+      "mobileImg": "/images/portfolio/mediamoob-store-demo-mobile.png",
+      "techStack": [
+        { "icon": "IconBrandReact", "name": "ReactJS" },
+        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
+        { "icon": "IconBrandPnpm", "name": "PNPM" },
+        { "icon": "", "name": "SwiperJS" },
+        { "icon": "", "name": "Post CSS" }
+      ],
+      "urlSite": "https://mediamoob-store.vercel.app/",
+      "urlDemo": "https://mediamoob-store.vercel.app/",
+      "urlRepo": ""
+    }
+  ]
+}

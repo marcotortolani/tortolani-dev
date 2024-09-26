@@ -7,7 +7,7 @@ const SpotlightData = {
   subtitle: 'Frontend Developer',
   descriptionShort: 'Apasionado - Creativo - Detallista',
   descriptionLong:
-    'Comprometido por el trabajo en equipo, siempre buscando mejorar la experiencia de usuario, un poco nerd, un poco chill. Buena música, trekking en montaña, Star Wars y videojuegos no pueden faltar.',
+    'Comprometido por el trabajo en equipo, siempre buscando mejorar la experiencia de usuario, un poco nerd, un poco chill. Buena música, trekking en montaña y charlas de tecnología no pueden faltar.',
 };
 
 export function SpotlightPreview() {

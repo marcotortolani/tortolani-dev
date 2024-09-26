@@ -1,15 +1,15 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { cn } from '@/utils/cn';
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
+import { cn } from '@/utils/cn'
 
 type Tab = {
-  title: string;
-  value: string;
-  href: string;
-};
+  title: string
+  value: string
+  href: string
+}
 
 export const Tabs = ({
   tabs: propTabs,
@@ -17,20 +17,20 @@ export const Tabs = ({
   activeTabClassName,
   tabClassName,
 }: {
-  tabs: Tab[];
-  containerClassName?: string;
-  activeTabClassName?: string;
-  tabClassName?: string;
+  tabs: Tab[]
+  containerClassName?: string
+  activeTabClassName?: string
+  tabClassName?: string
 }) => {
-  const [active, setActive] = useState<Tab>(propTabs[0]);
-  const router = useRouter();
+  const [active, setActive] = useState<Tab>(propTabs[0])
+  const router = useRouter()
 
   const moveSelectedTabToTop = (idx: number) => {
-    const newTabs = [...propTabs];
-    const selectedTab = newTabs.splice(idx, 1);
-    newTabs.unshift(selectedTab[0]);
-    setActive(newTabs[0]);
-  };
+    const newTabs = [...propTabs]
+    const selectedTab = newTabs.splice(idx, 1)
+    newTabs.unshift(selectedTab[0])
+    setActive(newTabs[0])
+  }
 
   return (
     <div
@@ -43,8 +43,8 @@ export const Tabs = ({
         <button
           key={tab.title}
           onClick={() => {
-            router.push(tab.href);
-            moveSelectedTabToTop(idx);
+            router.push(tab.href)
+            moveSelectedTabToTop(idx)
           }}
           className={cn('relative px-4 py-2 rounded-full', tabClassName)}
           style={{
@@ -56,16 +56,22 @@ export const Tabs = ({
               layoutId="clickedbutton"
               transition={{ type: 'spring', bounce: 0.3, duration: 0.6 }}
               className={cn(
-                'absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full ',
+                'absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full dark:shadow-inner dark:shadow-lime-100',
                 activeTabClassName
               )}
             />
           )}
-          <span className="relative block text-black dark:text-white">
+          <span
+            className={`${
+              active.value === tab.value
+                ? 'dark:text-slate-900 font-medium'
+                : 'text-black dark:text-white'
+            } transition-colors duration-500 ease-in-out relative block`}
+          >
             {tab.title}
           </span>
         </button>
       ))}
     </div>
-  );
-};
+  )
+}

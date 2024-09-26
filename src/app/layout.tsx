@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import ThemeProvider from '@/components/provider/ThemeProvider';
 import Header from '@/components/Header';
-import { inter } from "./fonts";
+import { inter } from './fonts';
 import './globals.css';
-
 
 export const metadata: Metadata = {
   title: 'Marco Tortolani',
@@ -30,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${inter.className} relative scroll-smooth flex flex-col items-center `}
+        className={`${inter.className} relative scroll-smooth  `}
       >
         <ThemeProvider
           attribute="class"
