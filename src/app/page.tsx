@@ -1,5 +1,9 @@
+import SectionEducation from '@/components/Education/SectionEducation'
 import { SpotlightPreview } from '../components/SpotlightPreview'
 import SectionWorks from '../components/Works/SectionWorks'
+import SectionAbout from '@/components/About/SectionAbout'
+import SectionContact from '@/components/Contact/SectionContact'
+import SectionTestimonials from '@/components/Testimonials/SectionTestimonials'
 
 export default function Home() {
   return (
@@ -7,18 +11,13 @@ export default function Home() {
       <SpotlightPreview />
 
       <SectionWorks />
-      <section className=" h-[100svh] flex items-center" id="education">
-        <h2>Education & Training</h2>
-      </section>
-      <section className=" h-[100svh] flex items-center" id="about">
-        <h2>About me</h2>
-      </section>
-      <section className=" h-[100svh] flex items-center" id="testimonials">
-        <h2>Testimonials</h2>
-      </section>
-      <section className=" h-[100svh] flex items-center" id="contact">
-        <h2>Contact</h2>
-      </section>
+      <SectionEducation />
+
+      <SectionAbout />
+
+      <SectionTestimonials />
+
+      <SectionContact />
     </main>
   )
 }

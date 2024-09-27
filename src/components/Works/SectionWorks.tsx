@@ -1,5 +1,6 @@
 'use client'
-import React, { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import useStateStore from '@/app/store/useStateStore'
 
 import { Button } from '../ui/button'
 import { BentoGrid, BentoGridItem } from './BentoGrid'
@@ -19,6 +20,11 @@ export default function SectionWorks() {
     cardsDisplayed > CARDS_DISPLAYED_INITIAL &&
     cardsDisplayed <= dataConfig?.works.length
 
+  const sectionRef = useRef<HTMLDivElement | null>(null)
+  //const sectionNav = useStateStore((state) => state.sectionNav)
+  const setSectionNav = useStateStore((state) => state.setSectionNav)
+
+
   function handleSelectedCard(e: any, item: itemCard) {
     //console.log(`X: ${e.clientX} - Y: ${e.clientY}`);
 
@@ -34,9 +40,40 @@ export default function SectionWorks() {
     if (e.target.name === 'less') setCardsDisplayed((prev) => prev - 2)
   }
 
+  useEffect(() => {
+    // Crear el IntersectionObserver
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Actualizar el estado según la visibilidad de la sección
+        if (entry.isIntersecting) {
+          setSectionNav('works')
+        }
+      },
+      {
+        // Opciones del observer
+        root: null, // El viewport actual
+        rootMargin: '0px',
+        threshold: 0.75, // Cambia el valor de este umbral si necesitas ajustar la cantidad visible
+      }
+    )
+
+    // Vincular el observer a la referencia de la sección
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    // Limpiar el observer cuando el componente se desmonte
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [])
+
   return (
     <section
       id="works"
+      ref={sectionRef}
       className=" min-h-[100svh] h-fit pb-20 w-screen rounded-md flex flex-col justify-between gap-10 md:cardsInitial-center md:justify-center bg-white dark:bg-black/[0.96] antialiased dark:bg-dot-white/[0.4] bg-dot-black/[0.3] relative"
     >
       {/* Radial gradient for the container to give a faded look */}

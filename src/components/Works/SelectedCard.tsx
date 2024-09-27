@@ -2,10 +2,10 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import * as TablerIcon from '@tabler/icons-react'
 import { itemCard } from '@/types/sectionWorks'
 import { IconX } from '@tabler/icons-react'
 import MockupPhone from './MockupPhone'
+import Icon from '../ui/Icon'
 
 export default function SelectedCard({
   data,
@@ -87,14 +87,37 @@ export default function SelectedCard({
           <div className=" mt-3 flex flex-col gap-2">
             <h4 className=" text-base font-semibold">Tech Stack</h4>
             <ul className=" w-full flex flex-wrap items-center gap-4">
-              {data?.techStack.map((tag, i) => (
-                <li
-                  key={i}
-                  className={`z-0 h-6 py-1 px-2 flex gap-1 items-center relative group/item bg-neutral-600 rounded-full `}
-                >
-                  <Icon nameTag={tag?.icon} />
-                  <span className=" text-sm">{tag?.name}</span>
-                </li>
+              {data?.techStack.map(({ link, icon, name }, i) => (
+                <Link key={i} href={link} target="_blank">
+                  <li
+                    className={` group/item relative z-0 h-6 transition-all duration-200 ease-in-out  `}
+                  >
+                    <div className=" h-full py-1 px-2 relative  bg-neutral-600 hover:bg-lime-600 hover:shadow-inner hover:shadow-lime-200 transition-all duration-300 ease-in-out rounded-full flex gap-1 items-center  ">
+                      <div className=" relative h-full overflow-hidden ">
+                        <span className="h-full flex items-center translate-y-0 group-hover/item:-translate-y-full transition-all duration-200 ease-in-out">
+                          <Icon name={icon} />
+                        </span>
+                        <svg
+                          className="h-full translate-y-0  group-hover/item:-translate-y-full transition-all duration-200 ease-in-out"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M9 15l6 -6" />
+                          <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" />
+                          <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />
+                        </svg>
+                      </div>
+                      <span className=" text-sm">{name}</span>
+                    </div>
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -104,10 +127,10 @@ export default function SelectedCard({
               text={data?.urlSite ? 'Site' : 'Demo'}
               href={data?.urlSite || data?.urlDemo || ''}
             >
-              <Icon nameTag="IconWorldWww" />
+              <Icon name="www-icon" />
             </LinkStyled>
             <LinkStyled text="Repo" href={data?.urlRepo || ''}>
-              <Icon nameTag="IconBrandGithub" />
+              <Icon name="github" />
             </LinkStyled>
           </div>
         </div>
@@ -129,15 +152,6 @@ export default function SelectedCard({
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
 )
-
-function Icon({ nameTag = '' }: { nameTag: string }) {
-  if (nameTag === '')
-    return (
-      <div className="h-3/5 aspect-square border border-neutral-300 rounded-full" />
-    )
-  const Tag = TablerIcon[nameTag]
-  return <Tag className="h-full w-auto text-neutral-300" />
-}
 
 function LinkStyled({
   text,

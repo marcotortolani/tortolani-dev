@@ -1,6 +1,8 @@
-import React from 'react';
-import { cn } from '@/utils/cn';
-import { Spotlight } from './ui/Spotlight';
+'use client'
+import { useEffect, useRef } from 'react'
+import useStateStore from '@/app/store/useStateStore'
+import { cn } from '@/utils/cn'
+import { Spotlight } from './ui/Spotlight'
 
 const SpotlightData = {
   title: 'Marco Tortolani',
@@ -8,11 +10,49 @@ const SpotlightData = {
   descriptionShort: 'Apasionado - Creativo - Detallista',
   descriptionLong:
     'Comprometido por el trabajo en equipo, siempre buscando mejorar la experiencia de usuario, un poco nerd, un poco chill. Buena música, trekking en montaña y charlas de tecnología no pueden faltar.',
-};
+}
 
 export function SpotlightPreview() {
+  const sectionRef = useRef<HTMLDivElement | null>(null)
+  //const sectionNav = useStateStore((state) => state.sectionNav)
+  const setSectionNav = useStateStore((state) => state.setSectionNav)
+
+  useEffect(() => {
+    // Crear el IntersectionObserver
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Actualizar el estado según la visibilidad de la sección
+        if (entry.isIntersecting) {
+          setSectionNav('home')
+        }
+      },
+      {
+        // Opciones del observer
+        root: null, // El viewport actual
+        rootMargin: '0px',
+        threshold: 0.75, // Cambia el valor de este umbral si necesitas ajustar la cantidad visible
+      }
+    )
+
+    // Vincular el observer a la referencia de la sección
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    // Limpiar el observer cuando el componente se desmonte
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [])
+
   return (
-    <section id="home" className="h-[100svh] pointer-events-none w-screen rounded-md flex flex-col justify-between gap-10 md:items-center md:justify-center bg-white dark:bg-black/[0.96] antialiased dark:bg-grid-white/[0.03] bg-grid-black/[0.03] relative overflow-hidden">
+    <section
+      id="home"
+      ref={sectionRef}
+      className="h-[100svh] pointer-events-none w-screen rounded-md flex flex-col justify-between gap-10 md:items-center md:justify-center bg-white dark:bg-black/[0.96] antialiased dark:bg-grid-white/[0.03] bg-grid-black/[0.03] relative overflow-hidden"
+    >
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -35,5 +75,5 @@ export function SpotlightPreview() {
         {SpotlightData.descriptionLong}
       </p>
     </section>
-  );
+  )
 }

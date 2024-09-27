@@ -23,11 +23,11 @@ const tabs = [
     value: 'about',
     href: '#about',
   },
-  // {
-  //   title: 'Testimonials',
-  //   value: 'testimonials',
-  //   href: '#testimonials',
-  // },
+  {
+    title: 'Testimonials',
+    value: 'testimonials',
+    href: '#testimonials',
+  },
   {
     title: 'Contact',
     value: 'contact',

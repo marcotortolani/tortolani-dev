@@ -4,7 +4,7 @@ export interface itemCard {
   developmentDescription: string
   desktopImg: string
   mobileImg: string
-  techStack: { icon: string; name: string }[]
+  techStack: { link: string; icon: string; name: string }[]
   urlSite: string
   urlDemo: string
   urlRepo: string

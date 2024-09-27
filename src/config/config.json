@@ -1,20 +1,83 @@
 {
   "works": [
     {
+      "title": "MoviChef",
+      "description": "App para generar recetas de comida.",
+      "developmentDescription": "La app fue desarrollada usando ReactJS con TypeScript. Como la app es pequeña y se quería priorizar que sea rápida se eligió Wouter para el enrutamiento y Zustand para el manejo del estado global, ya que son dos librerias muy livianas. Para las animaciones se utilizó Framer Motion.",
+      "desktopImg": "/images/portfolio/movichef-2024-desktop.png",
+      "mobileImg": "/images/portfolio/movichef-2024-mobile.png",
+      "techStack": [
+        { "link": "https://react.dev/", "icon": "react", "name": "React" },
+        {
+          "link": "https://typescriptlang.org/",
+          "icon": "typescript",
+          "name": "TypeScript"
+        },
+        {
+          "link": "https://tailwindcss.com/",
+          "icon": "tailwind",
+          "name": "TailwindCSS"
+        },
+        {
+          "link": "https://www.npmjs.com/package/wouter",
+          "icon": "wouter",
+          "name": "Wouter"
+        },
+        {
+          "link": "https://zustand-demo.pmnd.rs/",
+          "icon": "zustand",
+          "name": "Zustand"
+        },
+        {
+          "link": "https://www.framer.com/motion/",
+          "icon": "framer-motion",
+          "name": "Framer Motion"
+        },
+        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" }
+      ],
+      "urlSite": "",
+      "urlDemo": "https://movichef-demo.vercel.app/",
+      "urlRepo": ""
+    },
+    {
       "title": "Team Gamers (Movistar Venezuela)",
       "description": "Portal de contenido de entretenimiento. Temática gaming, gamers, streamers, eventos, editoriales y música trap/urbana.",
       "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento técnico de utilizar SSR (Server Side Rendering) para obtener una mejor performance ya que muy pocos elementos se renderizan en el cliente y por posicionamiento SEO del sitio. Todo el contenido del portal se consume de un sitio de WordPress utilizando su RESTful API. Todas los sliders están realizados con SwiperJS y hay algunas animaciones donde se utilizó Framer Motion.",
       "desktopImg": "/images/portfolio/team-gamers-movistar-ve-desktop.png",
       "mobileImg": "/images/portfolio/team-gamers-movistar-ve-mobile.png",
       "techStack": [
-        { "icon": "IconBrandNextjs", "name": "NextJS 14" },
-        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
-        { "icon": "IconBrandWordpress", "name": "WordPress API" },
-        { "icon": "IconBrandFramerMotion", "name": "Framer Motion" },
-        { "icon": "IconBrandPnpm", "name": "PNPM" },
-        { "icon": "", "name": "SwiperJS" },
-        { "icon": "", "name": "Post CSS" },
-        { "icon": "", "name": "Flowbite React" }
+        { "link": "https://nextjs.org/", "icon": "next", "name": "NextJS 14" },
+        {
+          "link": "https://tailwindcss.com/",
+          "icon": "tailwind",
+          "name": "TailwindCSS"
+        },
+        {
+          "link": "https://developer.wordpress.org/rest-api/",
+          "icon": "wordpress",
+          "name": "WordPress API"
+        },
+        {
+          "link": "https://www.framer.com/motion/",
+          "icon": "framer-motion",
+          "name": "Framer Motion"
+        },
+        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" },
+        {
+          "link": "https://swiperjs.com/",
+          "icon": "swiper",
+          "name": "SwiperJS"
+        },
+        {
+          "link": "https://postcss.org/",
+          "icon": "postcss",
+          "name": "Post CSS"
+        },
+        {
+          "link": "https://flowbite-react.com/",
+          "icon": "flowbite",
+          "name": "Flowbite React"
+        }
       ],
       "urlSite": "http://ve.movistar.new.teamgamers.club/",
       "urlDemo": "https://team-gamers-demo.vercel.app/",
@@ -27,12 +90,28 @@
       "desktopImg": "/images/portfolio/epa-mujer-demo-desktop.png",
       "mobileImg": "/images/portfolio/epa-mujer-demo-mobile.png",
       "techStack": [
-        { "icon": "IconBrandNextjs", "name": "NextJS 14" },
-        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
-        { "icon": "IconBrandWordpress", "name": "WordPress API" },
-        { "icon": "IconBrandPnpm", "name": "PNPM" },
-        { "icon": "", "name": "SwiperJS" },
-        { "icon": "", "name": "Post CSS" }
+        { "link": "https://nextjs.org/", "icon": "next", "name": "NextJS 14" },
+        {
+          "link": "https://tailwindcss.com/",
+          "icon": "tailwind",
+          "name": "TailwindCSS"
+        },
+        {
+          "link": "https://developer.wordpress.org/rest-api/",
+          "icon": "wordpress",
+          "name": "WordPress API"
+        },
+        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" },
+        {
+          "link": "https://swiperjs.com/",
+          "icon": "swiper",
+          "name": "SwiperJS"
+        },
+        {
+          "link": "https://postcss.org/",
+          "icon": "postcss",
+          "name": "Post CSS"
+        }
       ],
       "urlSite": "https://epa-mujer-digitel-ven.vercel.app/",
       "urlDemo": "",
@@ -41,19 +120,47 @@
     {
       "title": "Memoob Agency 2024",
       "description": "Sitio institucional de Media Moob. Rediseño año 2024",
-      "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento de obtener una mejor performance y por posicionamiento SEO del sitio. Por el gran alcance de la empresa, para la internacionalización del idioma se utilizó i18n. Para los formularios se usó React Hook Form con Yup para la validación de los campos, en el caso del formulario de newsletter se usa el servicio de Mailchimp. Todas los sliders están realizados con SwiperJS.",
+      "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento de obtener una mejor performance y por posicionamiento SEO del sitio. Por el gran alcance de la empresa, para la internacionalización del idioma se utilizó i18next. Para los formularios se usó React Hook Form con Yup para la validación de los campos, en el caso del formulario de newsletter se usa el servicio de Mailchimp. Todas los sliders están realizados con SwiperJS.",
       "desktopImg": "/images/portfolio/memoob-agency-2024-desktop.png",
       "mobileImg": "/images/portfolio/memoob-agency-2024-mobile.png",
       "techStack": [
-        { "icon": "IconBrandNextjs", "name": "NextJS 14" },
-        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
-        { "icon": "IconBrandPnpm", "name": "PNPM" },
-        { "icon": "", "name": "React Hook Form" },
-        { "icon": "", "name": "Yup" },
-        { "icon": "", "name": "i18n" },
-        { "icon": "", "name": "SwiperJS" },
-        { "icon": "", "name": "Post CSS" },
-        { "icon": "", "name": "Mailchimp Newsletter" }
+        { "link": "https://nextjs.org/", "icon": "next", "name": "NextJS 14" },
+        {
+          "link": "https://tailwindcss.com/",
+          "icon": "tailwind",
+          "name": "TailwindCSS"
+        },
+        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" },
+        {
+          "link": "https://react-hook-form.com/",
+          "icon": "react-hook-form",
+          "name": "React Hook Form"
+        },
+        {
+          "link": "https://www.npmjs.com/package/yup",
+          "icon": "yup",
+          "name": "Yup"
+        },
+        {
+          "link": "https://www.i18next.com/",
+          "icon": "i18n",
+          "name": "i18next"
+        },
+        {
+          "link": "https://swiperjs.com/",
+          "icon": "swiper",
+          "name": "SwiperJS"
+        },
+        {
+          "link": "https://postcss.org/",
+          "icon": "postcss",
+          "name": "Post CSS"
+        },
+        {
+          "link": "https://mailchimp.com/",
+          "icon": "mailchimp",
+          "name": "Mailchimp Newsletter"
+        }
       ],
       "urlSite": "",
       "urlDemo": "https://memoob-agency-2024.vercel.app/",
@@ -66,11 +173,28 @@
       "desktopImg": "/images/portfolio/mediamoob-store-demo-desktop.png",
       "mobileImg": "/images/portfolio/mediamoob-store-demo-mobile.png",
       "techStack": [
-        { "icon": "IconBrandReact", "name": "ReactJS" },
-        { "icon": "IconBrandTailwind", "name": "TailwindCSS" },
-        { "icon": "IconBrandPnpm", "name": "PNPM" },
-        { "icon": "", "name": "SwiperJS" },
-        { "icon": "", "name": "Post CSS" }
+        { "link": "https://react.dev/", "icon": "react", "name": "ReactJS" },
+        {
+          "link": "https://tailwindcss.com/",
+          "icon": "tailwind",
+          "name": "TailwindCSS"
+        },
+        {
+          "link": "https://reactrouter.com/en/main",
+          "icon": "react-router-dom",
+          "name": "React Router DOM"
+        },
+        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" },
+        {
+          "link": "https://swiperjs.com/",
+          "icon": "swiper",
+          "name": "SwiperJS"
+        },
+        {
+          "link": "https://postcss.org/",
+          "icon": "postcss",
+          "name": "Post CSS"
+        }
       ],
       "urlSite": "https://mediamoob-store.vercel.app/",
       "urlDemo": "https://mediamoob-store.vercel.app/",

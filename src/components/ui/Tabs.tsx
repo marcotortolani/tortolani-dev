@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { cn } from '@/utils/cn'
+import useStateStore from '@/app/store/useStateStore'
+import { Section } from '@/app/store/useStateStore'
 
 type Tab = {
   title: string
@@ -25,11 +27,31 @@ export const Tabs = ({
   const [active, setActive] = useState<Tab>(propTabs[0])
   const router = useRouter()
 
+  const sectionNav = useStateStore((state) => state.sectionNav)
+  const setSectionNav = useStateStore((state) => state.setSectionNav)
+
+
+  useEffect(() => {
+    if (sectionNav) {
+      const tab = propTabs.find((tab) => tab.value === sectionNav)
+      if (tab) {
+        setActive(tab)
+      }
+    }
+  }, [sectionNav])
+
   const moveSelectedTabToTop = (idx: number) => {
     const newTabs = [...propTabs]
     const selectedTab = newTabs.splice(idx, 1)
     newTabs.unshift(selectedTab[0])
     setActive(newTabs[0])
+  }
+
+  const handleClickTab = ({ tab, index }: { tab: Tab; index: number }) => {
+    //setActive(tab)
+    router.push(tab.href)
+    //moveSelectedTabToTop(index)
+    //setSectionNav(tab.value as Section)
   }
 
   return (
@@ -42,10 +64,7 @@ export const Tabs = ({
       {propTabs.map((tab, idx) => (
         <button
           key={tab.title}
-          onClick={() => {
-            router.push(tab.href)
-            moveSelectedTabToTop(idx)
-          }}
+          onClick={() => handleClickTab({ tab, index: idx })}
           className={cn('relative px-4 py-2 rounded-full', tabClassName)}
           style={{
             transformStyle: 'preserve-3d',

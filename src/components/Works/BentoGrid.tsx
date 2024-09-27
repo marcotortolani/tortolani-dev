@@ -4,6 +4,7 @@ import { cn } from '@/utils/cn'
 import { itemCard } from '@/types/sectionWorks'
 import * as TablerIcon from '@tabler/icons-react'
 import MockupPhone from './MockupPhone'
+import Icon from "../ui/Icon"
 
 export const BentoGrid = ({
   className,
@@ -59,8 +60,8 @@ export const BentoGridItem = ({
       <div className="group-hover/bento:translate-x-0 transition duration-200">
         <ul className=" flex items-center gap-2">
           {techStack.map((tag, i) => (
-            <li key={i}>
-              <Icon nameTag={tag?.icon} />
+            <li key={i} className=" h-5 w-5 flex items-center ">
+              <Icon name={tag?.icon} />
             </li>
           ))}
         </ul>
@@ -75,9 +76,9 @@ export const BentoGridItem = ({
   )
 }
 
-function Icon({ nameTag = '' }: { nameTag: any }) {
-  if (nameTag === '') return null
-  const Tag = TablerIcon[nameTag]
+// function Icon({ name = '' }: { name: any }) {
+//   if (name === '') return null
+//   const Tag = (TablerIcon as any)[name]
 
-  return <Tag className="h-5 w-5 text-neutral-500" />
-}
+//   return <Tag className="h-5 w-5 text-neutral-500" />
+// }
