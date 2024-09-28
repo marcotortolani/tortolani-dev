@@ -2,9 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import { cn } from '@/utils/cn'
 import { itemCard } from '@/types/sectionWorks'
-import * as TablerIcon from '@tabler/icons-react'
 import MockupPhone from './MockupPhone'
-import Icon from "../ui/Icon"
+import Icon from '../ui/Icon'
 
 export const BentoGrid = ({
   className,
@@ -33,8 +32,8 @@ export const BentoGridItem = ({
 }: {
   className?: string
   item: itemCard
-  index: number
-  onClick: (e: any) => void
+  index?: number
+  onClick?: (e: any) => void
 }) => {
   const { title, description, desktopImg, mobileImg, techStack } = item
   return (
@@ -75,10 +74,3 @@ export const BentoGridItem = ({
     </div>
   )
 }
-
-// function Icon({ name = '' }: { name: any }) {
-//   if (name === '') return null
-//   const Tag = (TablerIcon as any)[name]
-
-//   return <Tag className="h-5 w-5 text-neutral-500" />
-// }

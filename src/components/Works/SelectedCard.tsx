@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { itemCard } from '@/types/sectionWorks'
-import { IconX } from '@tabler/icons-react'
 import MockupPhone from './MockupPhone'
 import Icon from '../ui/Icon'
 
@@ -42,18 +41,12 @@ export default function SelectedCard({
     <div
       className={`${
         data !== null ? 'scale-y-100 ' : 'scale-y-0'
-      } absolute z-30 w-full h-full flex items-center p-8 cursor-default  backdrop-blur-sm dark:bg-black/40 transition-all duration-300 ease-in-out rounded-xl`}
+      } absolute z-30 w-full h-full flex items-center justify-center p-8 cursor-default  backdrop-blur-sm dark:bg-black/40 transition-all duration-300 ease-in-out rounded-xl`}
     >
       <div
         ref={ref}
-        className=" relative grid grid-cols-5 grid-rows-6 gap-4 w-full h-fit max-h-[40rem] rounded-xl hover:shadow-xl transition duration-300 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] border-black/[0.3] bg-gray-200 border"
+        className=" relative grid grid-cols-5 grid-rows-6 gap-4 w-5/6 h-fit max-h-[40rem] rounded-xl hover:shadow-xl transition duration-300 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] border-black/[0.3] bg-gray-200 border"
       >
-        <button
-          className=" absolute z-50 top-2 right-2 hover:dark:bg-neutral-800 transition-all duration-150 ease-in-out p-1 flex items-center  dark:bg-black dark:border-white/[0.2] border-black/[0.3] bg-gray-200 border rounded-lg"
-          onClick={() => onClose(null)}
-        >
-          <IconX size={20} />
-        </button>
         <div className=" col-span-3 row-span-4 flex flex-col justify-between relative rounded-lg ">
           <div className=" w-full flex items-center gap-10 ">
             <h3 className=" w-full min-w-fit line-clamp-1 text-xl font-sans font-extrabold text-wrap text-neutral-600 dark:text-neutral-200 mb-2 mt-2">

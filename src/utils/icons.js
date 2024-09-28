@@ -427,7 +427,7 @@ export function FlowbiteIcon({
 }) {
   return (
     <svg
-      ariaHidden="true"
+      aria-hidden="true"
       width={width}
       height={height}
       viewBox="0 0 24 24"

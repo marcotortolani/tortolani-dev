@@ -1,45 +1,7 @@
 {
   "works": [
     {
-      "title": "MoviChef",
-      "description": "App para generar recetas de comida.",
-      "developmentDescription": "La app fue desarrollada usando ReactJS con TypeScript. Como la app es pequeña y se quería priorizar que sea rápida se eligió Wouter para el enrutamiento y Zustand para el manejo del estado global, ya que son dos librerias muy livianas. Para las animaciones se utilizó Framer Motion.",
-      "desktopImg": "/images/portfolio/movichef-2024-desktop.png",
-      "mobileImg": "/images/portfolio/movichef-2024-mobile.png",
-      "techStack": [
-        { "link": "https://react.dev/", "icon": "react", "name": "React" },
-        {
-          "link": "https://typescriptlang.org/",
-          "icon": "typescript",
-          "name": "TypeScript"
-        },
-        {
-          "link": "https://tailwindcss.com/",
-          "icon": "tailwind",
-          "name": "TailwindCSS"
-        },
-        {
-          "link": "https://www.npmjs.com/package/wouter",
-          "icon": "wouter",
-          "name": "Wouter"
-        },
-        {
-          "link": "https://zustand-demo.pmnd.rs/",
-          "icon": "zustand",
-          "name": "Zustand"
-        },
-        {
-          "link": "https://www.framer.com/motion/",
-          "icon": "framer-motion",
-          "name": "Framer Motion"
-        },
-        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" }
-      ],
-      "urlSite": "",
-      "urlDemo": "https://movichef-demo.vercel.app/",
-      "urlRepo": ""
-    },
-    {
+      "id": 1,
       "title": "Team Gamers (Movistar Venezuela)",
       "description": "Portal de contenido de entretenimiento. Temática gaming, gamers, streamers, eventos, editoriales y música trap/urbana.",
       "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento técnico de utilizar SSR (Server Side Rendering) para obtener una mejor performance ya que muy pocos elementos se renderizan en el cliente y por posicionamiento SEO del sitio. Todo el contenido del portal se consume de un sitio de WordPress utilizando su RESTful API. Todas los sliders están realizados con SwiperJS y hay algunas animaciones donde se utilizó Framer Motion.",
@@ -84,40 +46,47 @@
       "urlRepo": ""
     },
     {
-      "title": "Epa Mujer (Digitel Venezuela)",
-      "description": "Portal de contenido para mujeres. Temática bienestar, moda, belleza, recetas, cosmic y más.",
-      "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento técnico de utilizar SSR (Server Side Rendering) para obtener una mejor performance ya que muy pocos elementos se renderizan en el cliente y por posicionamiento SEO del sitio. Todo el contenido del portal se consume de un sitio de WordPress utilizando su RESTful API. Todas los sliders están realizados con SwiperJS.",
-      "desktopImg": "/images/portfolio/epa-mujer-demo-desktop.png",
-      "mobileImg": "/images/portfolio/epa-mujer-demo-mobile.png",
+      "id": 2,
+      "title": "MoviChef",
+      "description": "App para generar recetas de comida.",
+      "developmentDescription": "La app fue desarrollada usando ReactJS con TypeScript. Como la app es pequeña y se quería priorizar que sea rápida se eligió Wouter para el enrutamiento y Zustand para el manejo del estado global, ya que son dos librerias muy livianas. Para las animaciones se utilizó Framer Motion.",
+      "desktopImg": "/images/portfolio/movichef-2024-desktop.png",
+      "mobileImg": "/images/portfolio/movichef-2024-mobile.png",
       "techStack": [
-        { "link": "https://nextjs.org/", "icon": "next", "name": "NextJS 14" },
+        { "link": "https://react.dev/", "icon": "react", "name": "React" },
+        {
+          "link": "https://typescriptlang.org/",
+          "icon": "typescript",
+          "name": "TypeScript"
+        },
         {
           "link": "https://tailwindcss.com/",
           "icon": "tailwind",
           "name": "TailwindCSS"
         },
         {
-          "link": "https://developer.wordpress.org/rest-api/",
-          "icon": "wordpress",
-          "name": "WordPress API"
-        },
-        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" },
-        {
-          "link": "https://swiperjs.com/",
-          "icon": "swiper",
-          "name": "SwiperJS"
+          "link": "https://www.npmjs.com/package/wouter",
+          "icon": "wouter",
+          "name": "Wouter"
         },
         {
-          "link": "https://postcss.org/",
-          "icon": "postcss",
-          "name": "Post CSS"
-        }
+          "link": "https://zustand-demo.pmnd.rs/",
+          "icon": "zustand",
+          "name": "Zustand"
+        },
+        {
+          "link": "https://www.framer.com/motion/",
+          "icon": "framer-motion",
+          "name": "Framer Motion"
+        },
+        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" }
       ],
-      "urlSite": "https://epa-mujer-digitel-ven.vercel.app/",
-      "urlDemo": "",
+      "urlSite": "",
+      "urlDemo": "https://movichef-demo.vercel.app/",
       "urlRepo": ""
     },
     {
+      "id": 3,
       "title": "Memoob Agency 2024",
       "description": "Sitio institucional de Media Moob. Rediseño año 2024",
       "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento de obtener una mejor performance y por posicionamiento SEO del sitio. Por el gran alcance de la empresa, para la internacionalización del idioma se utilizó i18next. Para los formularios se usó React Hook Form con Yup para la validación de los campos, en el caso del formulario de newsletter se usa el servicio de Mailchimp. Todas los sliders están realizados con SwiperJS.",
@@ -167,8 +136,45 @@
       "urlRepo": ""
     },
     {
+      "id": 4,
+      "title": "Epa Mujer (Digitel Venezuela)",
+      "description": "Portal de contenido para mujeres. Temática bienestar, moda, belleza, recetas, cosmic y más.",
+      "developmentDescription": "El sitio fue desarrollado utilizando NextJS por requerimiento técnico de utilizar SSR (Server Side Rendering) para obtener una mejor performance ya que muy pocos elementos se renderizan en el cliente y por posicionamiento SEO del sitio. Todo el contenido del portal se consume de un sitio de WordPress utilizando su RESTful API. Todas los sliders están realizados con SwiperJS.",
+      "desktopImg": "/images/portfolio/epa-mujer-demo-desktop.png",
+      "mobileImg": "/images/portfolio/epa-mujer-demo-mobile.png",
+      "techStack": [
+        { "link": "https://nextjs.org/", "icon": "next", "name": "NextJS 14" },
+        {
+          "link": "https://tailwindcss.com/",
+          "icon": "tailwind",
+          "name": "TailwindCSS"
+        },
+        {
+          "link": "https://developer.wordpress.org/rest-api/",
+          "icon": "wordpress",
+          "name": "WordPress API"
+        },
+        { "link": "https://pnpm.io/", "icon": "pnpm", "name": "PNPM" },
+        {
+          "link": "https://swiperjs.com/",
+          "icon": "swiper",
+          "name": "SwiperJS"
+        },
+        {
+          "link": "https://postcss.org/",
+          "icon": "postcss",
+          "name": "Post CSS"
+        }
+      ],
+      "urlSite": "https://epa-mujer-digitel-ven.vercel.app/",
+      "urlDemo": "",
+      "urlRepo": ""
+    },
+
+    {
+      "id": 5,
       "title": "Media Moob Store",
-      "description": "App interna para tener centralizado el acceso a los productos de Media Moob.",
+      "description": "App interna para centralizar y unificar el acceso a todos los productos de Media Moob.",
       "developmentDescription": "El sitio fue desarrollado utilizando ReactJS. Todas los sliders están realizados con SwiperJS.",
       "desktopImg": "/images/portfolio/mediamoob-store-demo-desktop.png",
       "mobileImg": "/images/portfolio/mediamoob-store-demo-mobile.png",

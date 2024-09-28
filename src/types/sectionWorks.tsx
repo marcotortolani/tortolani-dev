@@ -1,4 +1,5 @@
 export interface itemCard {
+  id: number
   title: string
   description: string
   developmentDescription: string
